@@ -1,0 +1,17 @@
+{
+  "name": "depot",
+  "displayName": "depot",
+  "expo": {
+    "name": "depot",
+    "slug": "depot",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
