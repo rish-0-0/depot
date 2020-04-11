@@ -6,32 +6,32 @@ const items = [
 	{
 		category: "Groceries",
         source: require("../../assets/groceries.png"),
-        onPress: () => {},
+        route: "groceries"
 	},
 	{
 		category: "Medical",
         source: require("../../assets/pharmacy.png"),
-        onPress: () => {},
+        route: "medical"
 	},
 	{
 		category: "Hardware",
         source: require("../../assets/spanner.png"),
-        onPress: () => {},
+        route: "hardware"
 	},
 	{
 		category: "Services",
         source: require("../../assets/car-service.png"),
-        onPress: () => {},
+        route: "services"
 	},
 	{
 		category: "General Items",
         source: require("../../assets/toothbrush.png"),
-        onPress: () => {},
+        route: "general"
 	},
 	{
 		category: "Deliverables",
         source: require("../../assets/food.png"),
-        onPress: () => {},
+        route: "deliverables"
 	},
 ];
 
@@ -51,7 +51,7 @@ export default function HomeScreen(props) {
 							style={{ ...GlobalStyleSheet.horizontalCol, ...styles.card }}
 							category={iterator.item.category}
                             source={iterator.item.source}
-                            onPress={iterator.item.onPress}
+                            onPress={() => props.navigation.navigate("Search", { category : iterator.item.route })}
 						/>
 					);
 				}}
