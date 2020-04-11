@@ -1,30 +1,38 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+import { HomeScreen } from "./screens";
+
+const BottomTab = createMaterialBottomTabNavigator();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to React Native!</Text>
-      <Text style={styles.instructions}>To get started, edit App.js</Text>
-    </View>
-  );
+	return (
+		<NavigationContainer>
+			<BottomTab.Navigator
+				initialRouteName="Home"
+				barStyle={{
+					backgroundColor: "white",
+					overflow: 'hidden',
+					borderTopRightRadius: 20,
+					borderTopLeftRadius: 20,
+				}}
+				style={{
+					backgroundColor: '#F0F0F0',
+				}}
+				
+			>
+				<BottomTab.Screen
+					name="Home"
+					component={HomeScreen}
+					options={{
+						tabBarIcon: ({ color }) => (
+							<MaterialCommunityIcons name="home" color={color} size={26} />
+						),
+					}}
+				/>
+			</BottomTab.Navigator>
+		</NavigationContainer>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
