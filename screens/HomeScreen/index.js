@@ -44,7 +44,7 @@ export default function HomeScreen(props) {
                 data={items}
 				style={styles.scrollview}
 				horizontal={true}
-				indicatorStyle="white"
+				indicatorStyle="black"
 				renderItem={(iterator) => {
 					return (
 						<Category
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		letterSpacing: 1.5,
 		textAlign: "left",
-		color: "#000",
+		color: "#fff",
 	},
 	header: {
 		position: 'absolute',
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
 		fontSize: 48,
 		letterSpacing: 1.5,
 		textAlign: "left",
-		color: "#000",
+		color: "#fff",
 	},
 	scrollview: {
 		position: 'absolute',

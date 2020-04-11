@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
 	text: {
 		textAlign: 'center',
 		padding: 10,
+		fontFamily: 'Roboto',
 		fontSize: 12,
 		letterSpacing: 1,
 		textAlignVertical: 'center',
