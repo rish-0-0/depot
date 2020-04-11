@@ -24,7 +24,11 @@ const styles = StyleSheet.create({
 		marginTop: 20,
 	},
 	text: {
-		textAlign: 'center'
+		textAlign: 'center',
+		padding: 10,
+		fontSize: 12,
+		letterSpacing: 1,
+		textAlignVertical: 'center',
 	},
 });
 

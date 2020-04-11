@@ -12,6 +12,11 @@
     ],
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#F0F0F0"
+    },
+    "icon": "./assets/icon.png"
   }
 }

@@ -15,11 +15,13 @@ export default function App() {
 				barStyle={{
 					backgroundColor: "white",
 					overflow: 'hidden',
-					borderTopRightRadius: 20,
-					borderTopLeftRadius: 20,
+					borderRadius: 40,
+					padding: 10,
+					elevation: 1,
 				}}
 				style={{
 					backgroundColor: '#F0F0F0',
+					padding: 5,
 				}}
 				
 			>
