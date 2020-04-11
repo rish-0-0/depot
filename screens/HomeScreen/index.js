@@ -44,6 +44,7 @@ export default function HomeScreen(props) {
                 data={items}
 				style={styles.scrollview}
 				horizontal={true}
+				indicatorStyle="white"
 				renderItem={(iterator) => {
 					return (
 						<Category
@@ -63,11 +64,18 @@ export default function HomeScreen(props) {
 const styles = StyleSheet.create({
 	container: {
 		...StyleSheet.absoluteFillObject,
-		backgroundColor: "#F0F0F0",
-		paddingHorizontal: 9,
-		paddingVertical: "10%",
+		backgroundColor: "#473f97",
+		borderBottomLeftRadius: 30,
+		borderBottomRightRadius: 30,
+		paddingTop: 0,
+		paddingBottom: 0,
+		marginBottom: "15%",
+		marginTop: 0,
 	},
 	breadcrumbs: {
+		position: 'absolute',
+		top: '25%',
+		left: '5%',
 		fontFamily: "Roboto",
 		fontWeight: "200",
 		fontSize: 18,
@@ -76,6 +84,9 @@ const styles = StyleSheet.create({
 		color: "#000",
 	},
 	header: {
+		position: 'absolute',
+		top: '30%',
+		left: '5%',		
 		fontFamily: "Roboto",
 		fontWeight: "bold",
 		fontSize: 48,
@@ -84,7 +95,8 @@ const styles = StyleSheet.create({
 		color: "#000",
 	},
 	scrollview: {
-		marginTop: 40,
+		position: 'absolute',
+		top: '50%',
 		maxHeight: 182,
 	},
 	card: {

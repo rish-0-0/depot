@@ -16,12 +16,14 @@ export default function App() {
 					backgroundColor: "white",
 					overflow: 'hidden',
 					borderRadius: 40,
+					borderBottomLeftRadius: 0,
+					borderBottomRightRadius: 0,
 					padding: 10,
-					elevation: 1,
+					margin: 0,
+					elevation: 2,
 				}}
 				style={{
-					backgroundColor: '#F0F0F0',
-					padding: 5,
+					backgroundColor: '#f0f0f0',
 				}}
 				
 			>
