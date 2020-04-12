@@ -9,8 +9,11 @@ const Stack = createStackNavigator();
 function SearchStack () {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Autocomplete" component={Autocomplete} />
-            <Stack.Screen name="Maps" component={SearchMap} />
+            <Stack.Screen name="Autocomplete" component={Autocomplete} options={{
+                header: () => null,
+            }} />
+            <Stack.Screen name="Maps" component={SearchMap} options={{
+            }} />
         </Stack.Navigator>
     );
 }

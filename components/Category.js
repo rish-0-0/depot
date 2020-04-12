@@ -12,7 +12,7 @@ function CategoryCard(props) {
 
 const styles = StyleSheet.create({
 	container: {
-		borderRadius: 20,
+		borderRadius: 30,
 		height: 166,
 		width: 173,
 	},

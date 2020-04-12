@@ -1,9 +1,13 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
+import {
+	MaterialCommunityIcons,
+	FontAwesome,
+	Feather,
+} from "@expo/vector-icons";
 
-import { HomeScreen, SearchScreen } from "./screens";
+import { HomeScreen, SearchScreen, BusinessScreen } from "./screens";
 
 const BottomTab = createMaterialBottomTabNavigator();
 
@@ -14,7 +18,7 @@ export default function App() {
 				initialRouteName="Home"
 				barStyle={{
 					backgroundColor: "white",
-					overflow: 'hidden',
+					overflow: "hidden",
 					borderRadius: 40,
 					borderBottomLeftRadius: 0,
 					borderBottomRightRadius: 0,
@@ -23,16 +27,25 @@ export default function App() {
 					elevation: 2,
 				}}
 				style={{
-					backgroundColor: '#f0f0f0',
+					backgroundColor: "#f0f0f0",
 				}}
-				
 			>
+				<BottomTab.Screen
+					name="Shop"
+					component={BusinessScreen}
+					options={{
+						tabBarIcon: ({ color }) => (
+							<Feather name="shopping-cart" color={color} size={22} />
+						),
+						tabBarLabel: "My Business",
+					}}
+				/>
 				<BottomTab.Screen
 					name="Home"
 					component={HomeScreen}
 					options={{
 						tabBarIcon: ({ color }) => (
-							<MaterialCommunityIcons name="home" color={color} size={26} />
+							<MaterialCommunityIcons name="home" color={color} size={22} />
 						),
 					}}
 				/>
@@ -41,7 +54,7 @@ export default function App() {
 					component={SearchScreen}
 					options={{
 						tabBarIcon: ({ color }) => (
-							<FontAwesome name="search" color={color} size={26} />
+							<FontAwesome name="search" color={color} size={22} />
 						),
 					}}
 				/>

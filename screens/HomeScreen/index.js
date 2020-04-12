@@ -43,7 +43,7 @@ export default function HomeScreen(props) {
 			<FlatList
                 data={items}
 				style={styles.scrollview}
-				horizontal={true}
+				numColumns={2}
 				indicatorStyle="black"
 				renderItem={(iterator) => {
 					return (
@@ -67,40 +67,36 @@ const styles = StyleSheet.create({
 		backgroundColor: "#473f97",
 		borderBottomLeftRadius: 30,
 		borderBottomRightRadius: 30,
-		paddingTop: 0,
+		paddingTop: '10%',
 		paddingBottom: 0,
-		marginBottom: "15%",
 		marginTop: 0,
 	},
 	breadcrumbs: {
-		position: 'absolute',
-		top: '25%',
-		left: '5%',
 		fontFamily: "Roboto",
 		fontWeight: "200",
 		fontSize: 18,
+		paddingLeft: '5%',
 		letterSpacing: 1.5,
 		textAlign: "left",
 		color: "#fff",
 	},
-	header: {
-		position: 'absolute',
-		top: '30%',
-		left: '5%',		
+	header: {	
 		fontFamily: "Roboto",
 		fontWeight: "bold",
 		fontSize: 48,
+		paddingTop: '1%',
+		paddingLeft: '5%',
+		paddingBottom: '2%',
 		letterSpacing: 1.5,
 		textAlign: "left",
 		color: "#fff",
 	},
 	scrollview: {
-		position: 'absolute',
-		top: '50%',
-		maxHeight: 182,
+		minHeight: '84.5%',
+		flexDirection: 'column'
 	},
 	card: {
 		backgroundColor: "white",
-		margin: 4,
+		margin: 2,
 	},
 });
